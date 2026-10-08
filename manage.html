@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Gerir reserva · Brâmica (pré-visualização)</title>
+  <meta name="theme-color" content="#f4eee3">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230e442a'/%3E%3Ctext x='32' y='41' font-family='Montserrat,Arial' font-size='28' font-weight='300' fill='%23f4eee3' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="manage" data-title="meta.titleManage">
+  <header id="site-header"></header>
+
+  <main id="main" tabindex="-1" class="container">
+    <div class="page-hero">
+      <p class="eyebrow" data-i18n="manage.eyebrow"></p>
+      <h1 data-i18n="manage.title"></h1>
+    </div>
+
+    <div class="manage-wrap">
+      <section class="panel" aria-labelledby="lookup-title">
+        <h2 id="lookup-title" class="sr-only" data-i18n="manage.title"></h2>
+        <p class="sub" data-i18n="manage.intro"></p>
+        <form class="form" id="lookup" novalidate>
+          <div class="field"><label for="m-ref" data-i18n="manage.ref"></label><input id="m-ref" name="ref" autocomplete="off" placeholder="BRM-2026-XXXX" style="text-transform:uppercase"></div>
+          <div class="field"><label for="m-email" data-i18n="manage.email"></label><input id="m-email" name="email" type="email" autocomplete="email"></div>
+          <p class="err" id="lookup-err" role="alert" style="color:var(--err);margin:0;font-family:var(--font-head);font-size:.88rem"></p>
+          <div class="btn-row" style="margin-top:0">
+            <button class="btn" type="submit" data-i18n="manage.find"></button>
+            <button class="btn btn-ghost" type="button" id="use-latest" hidden data-i18n="manage.useLatest"></button>
+          </div>
+        </form>
+      </section>
+
+      <div id="result"></div>
+
+      <section class="panel" aria-labelledby="pk-title">
+        <h2 id="pk-title" data-i18n="manage.packagesT"></h2>
+        <div class="pkg-list" id="pkgs"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/i18n.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/payment-demo.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
+</body>
+</html>
