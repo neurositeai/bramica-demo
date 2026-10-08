@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Reservar workshop · Brâmica (pré-visualização)</title>
+  <meta name="theme-color" content="#f4eee3">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230e442a'/%3E%3Ctext x='32' y='41' font-family='Montserrat,Arial' font-size='28' font-weight='300' fill='%23f4eee3' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="booking" data-title="meta.titleBooking">
+  <header id="site-header"></header>
+
+  <main id="main" tabindex="-1" class="container">
+    <div class="page-hero">
+      <p class="eyebrow" data-i18n="book.eyebrow"></p>
+      <h1 data-i18n="book.title"></h1>
+    </div>
+
+    <ol class="progress" id="progress" data-i18n-attr="aria-label:book.progress"></ol>
+
+    <div class="book-layout" id="book-layout">
+      <div id="wizard">
+
+        <!-- Step 1: date -->
+        <section class="panel step" id="step-1" aria-labelledby="h-1">
+          <h2 id="h-1" tabindex="-1" data-i18n="book.s1t"></h2>
+          <p class="sub" data-i18n="book.s1d"></p>
+          <fieldset class="dates" id="dates"></fieldset>
+          <div class="field"><p class="err" id="date-err" role="alert"></p></div>
+          <p class="note" data-i18n="book.mockNote"></p>
+          <div class="form-actions">
+            <span></span>
+            <button class="btn" type="button" id="to-2" disabled data-i18n="book.next"></button>
+          </div>
+        </section>
+
+        <!-- Step 2: details -->
+        <section class="panel step" id="step-2" aria-labelledby="h-2" hidden>
+          <h2 id="h-2" tabindex="-1" data-i18n="book.s2t"></h2>
+          <form class="form" id="details" novalidate>
+            <div class="field"><label for="b-name" data-i18n="book.name"></label><input id="b-name" name="name" autocomplete="name" required aria-required="true" aria-describedby="b-name-err"><p class="err" id="b-name-err" role="alert"></p></div>
+            <div class="field"><label for="b-email" data-i18n="book.email"></label><input id="b-email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="b-email-err"><p class="err" id="b-email-err" role="alert"></p></div>
+            <div class="field"><label for="b-phone" data-i18n="book.phone"></label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required aria-required="true" aria-describedby="b-phone-hint b-phone-err"><span class="hint" id="b-phone-hint" data-i18n="book.phoneHint"></span><p class="err" id="b-phone-err" role="alert"></p></div>
+            <div class="form-actions">
+              <button class="btn btn-ghost" type="button" id="back-1" data-i18n="book.back"></button>
+              <button class="btn" type="submit" data-i18n="book.next"></button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Step 3: payment (shared demo checkout) -->
+        <section class="step" id="step-3" aria-labelledby="h-3" hidden>
+          <h2 id="h-3" class="sr-only" tabindex="-1" data-i18n="book.s3t"></h2>
+          <div id="checkout"></div>
+          <div class="form-actions">
+            <button class="btn btn-ghost" type="button" id="back-2" data-i18n="book.back"></button>
+            <span></span>
+          </div>
+        </section>
+
+        <!-- Step 4: confirmation -->
+        <section class="panel step" id="step-4" aria-labelledby="h-4" hidden>
+          <h2 id="h-4" tabindex="-1" data-i18n="book.s4t"></h2>
+          <div id="confirm"></div>
+        </section>
+      </div>
+
+      <aside class="side" aria-labelledby="info-title">
+        <figure class="side-photo"><img src="assets/img/three-cups-l.webp" width="492" height="450" loading="lazy" decoding="async" data-alt="three-cups" alt=""></figure>
+        <div class="panel">
+          <h2 id="info-title" data-i18n="book.infoT"></h2>
+          <ul class="info-list">
+            <li data-i18n="book.infoTime"></li>
+            <li data-i18n="book.infoSessions"></li>
+            <li data-i18n="book.infoPieces"></li>
+            <li data-i18n="book.infoIncluded"></li>
+            <li class="no" data-i18n="book.infoExcluded"></li>
+          </ul>
+          <p class="info-price" data-i18n-html="book.infoPrice"></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="js/i18n.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/payment-demo.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
+</body>
+</html>

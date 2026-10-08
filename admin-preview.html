@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Painel de administração (pré-visualização) · Brâmica</title>
+  <meta name="theme-color" content="#12151a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230e442a'/%3E%3Ctext x='32' y='41' font-family='Montserrat,Arial' font-size='28' font-weight='300' fill='%23f4eee3' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin" data-title="meta.titleAdmin">
+  <div class="admin-banner" role="note"><span data-i18n="admin.banner"></span></div>
+
+  <div class="admin">
+    <aside class="admin-side">
+      <a class="logo" href="index.html" data-i18n-attr="aria-label:a11y.home"><img class="logo-img" src="assets/img/logo-amber.webp" width="480" height="104" alt=""></a>
+      <ul class="admin-nav" id="admin-nav" aria-label="Menu (não funcional / not functional)"></ul>
+    </aside>
+
+    <main id="main" class="admin-main" tabindex="-1">
+      <div class="admin-title">
+        <div>
+          <span class="chip" data-i18n="admin.eyebrow"></span>
+          <h1 data-i18n="admin.title" style="margin-top:.7rem"></h1>
+        </div>
+        <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+          <div class="lang" role="group" data-i18n-attr="aria-label:a11y.langGroup">
+            <button type="button" data-lang="pt" aria-pressed="false" lang="pt-PT">PT</button>
+            <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="index.html#roadmap" data-i18n="admin.back"></a>
+        </div>
+      </div>
+
+      <div class="kpis" id="kpis"></div>
+
+      <div class="cols2">
+        <section class="card-a" aria-labelledby="up-title">
+          <h2 id="up-title"><span data-i18n="admin.upcoming"></span><span class="pill grey" data-i18n="admin.sample"></span></h2>
+          <div class="tbl-wrap"><table class="t" id="t-up"></table></div>
+        </section>
+        <section class="card-a" aria-labelledby="ch-title">
+          <h2 id="ch-title"><span data-i18n="admin.chartT"></span></h2>
+          <div class="chartwrap"><div class="chartbars" id="chart" role="img" aria-label="Sample chart"></div></div>
+        </section>
+      </div>
+
+      <section class="card-a" aria-labelledby="bk-title">
+        <h2 id="bk-title"><span data-i18n="admin.bookings"></span><span class="pill grey" data-i18n="admin.sample"></span></h2>
+        <div class="tbl-wrap"><table class="t" id="t-bk"></table></div>
+      </section>
+
+      <div class="cols2">
+        <section class="card-a" aria-labelledby="ld-title">
+          <h2 id="ld-title"><span data-i18n="admin.leads"></span><span class="pill grey" data-i18n="admin.sample"></span></h2>
+          <div class="tbl-wrap"><table class="t" id="t-ld"></table></div>
+        </section>
+        <section class="card-a" aria-labelledby="pk-title">
+          <h2 id="pk-title"><span data-i18n="admin.pkgT"></span></h2>
+          <div class="tbl-wrap"><table class="t" id="t-pk" style="min-width:0"></table></div>
+          <p class="note" style="margin-top:1.2rem"><button type="button" class="btn btn-sm fake-btn" aria-disabled="true" tabindex="-1" data-i18n="admin.disabled"></button></p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/i18n.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/admin-preview.js" defer></script>
+</body>
+</html>
